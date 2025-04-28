@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class PeopleDatabaseApp {
     public static void main(String[] args) {
-        // Database connection settings
+
         String url = "jdbc:sqlserver://isaac-levin.chi2aecgybw6.us-east-2.rds.amazonaws.com:1433;databaseName=ISAAC_LEVIN;encrypt=true;trustServerCertificate=true";
         String username = "isaacglevin";
         String password = "private";
