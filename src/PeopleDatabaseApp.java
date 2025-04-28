@@ -6,7 +6,7 @@ public class PeopleDatabaseApp {
         // Database connection settings
         String url = "jdbc:sqlserver://isaac-levin.chi2aecgybw6.us-east-2.rds.amazonaws.com:1433;databaseName=ISAAC_LEVIN;encrypt=true;trustServerCertificate=true";
         String username = "isaacglevin";
-        String password = "hdcbrilal";
+        String password = "private";
 
         try (Connection conn = DriverManager.getConnection(url, username, password)) {
             System.out.println("Connected to database!");
