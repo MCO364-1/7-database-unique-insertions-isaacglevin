@@ -4,9 +4,9 @@ import java.util.Scanner;
 public class PeopleDatabaseApp {
     public static void main(String[] args) {
 
-        String url = "jdbc:sqlserver://isaac-levin.chi2aecgybw6.us-east-2.rds.amazonaws.com:1433;databaseName=ISAAC_LEVIN;encrypt=true;trustServerCertificate=true";
-        String username = "isaacglevin";
-        String password = "private!";
+        String url = "jdbc:sqlserver://database-1.ckxf3a0k0vuw.us-east-1.rds.amazonaws.com:1433;databaseName=ISAAC_LEVIN;encrypt=true;trustServerCertificate=true";
+        String username = "MCON364";
+        String password = "Pesach2025";
 
         try (Connection conn = DriverManager.getConnection(url, username, password)) {
             System.out.println("Connected to database!");
