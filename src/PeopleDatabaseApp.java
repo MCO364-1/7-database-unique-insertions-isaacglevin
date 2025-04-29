@@ -1,12 +1,23 @@
 import java.sql.*;
 import java.util.Scanner;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 
 public class PeopleDatabaseApp {
     public static void main(String[] args) {
 
-        String url = "jdbc:sqlserver://database-1.ckxf3a0k0vuw.us-east-1.rds.amazonaws.com:1433;databaseName=ISAAC_LEVIN;encrypt=true;trustServerCertificate=true";
-        String username = "MCON364";
-        String password = "Pesach2025";
+        Properties props = new Properties();
+        try {
+            props.load(PeopleDatabaseApp.class.getClassLoader().getResourceAsStream("res.properties"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String url = props.getProperty("res.url");
+        String username = props.getProperty("res.username");
+        String password = props.getProperty("res.password");
 
         try (Connection conn = DriverManager.getConnection(url, username, password)) {
             System.out.println("Connected to database!");
